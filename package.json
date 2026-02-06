@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "name": "sentinelai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xafiertect/sentinelai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xafiertect/sentinelai/issues"
+  },
+  "homepage": "https://github.com/xafiertect/sentinelai#readme",
+  "dependencies": {
+    "tesseract.js": "^7.0.0"
+  }
+}
