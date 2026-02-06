@@ -1,17 +1,19 @@
 import Tesseract from "tesseract.js";
 
 async function runOCR(imagePath) {
-  const result = await Tesseract.recognize(
-    imagePath,
-    "ind+eng",
-    {
-      logger: m => console.log(m.status)
-    }
-  );
+  const worker = await Tesseract.createWorker("ind+eng");
+  
+  await worker.setParameters({
+    tessedit_pageseg_mode: 11
+  });
 
+  const result = await worker.recognize(imagePath);
   const text = result.data.text;
+
+  await worker.terminate();
   return text;
 }
+
 
 // supaya bisa dijalankan langsung
 const imagePath = process.argv[2];
